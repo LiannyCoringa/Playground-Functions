@@ -182,10 +182,10 @@ const techList = (array, nome) => {
   for (let index = 0; index < arrayOrdenado.length; index += 1) {
     retorno.push({
       tech: arrayOrdenado[index],
-      name: nome
-    })
+      name: nome,
+    });
   } return retorno;
-}
+};
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
