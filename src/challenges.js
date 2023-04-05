@@ -176,7 +176,16 @@ const decode = (frase) => {
   } return retorno;
 };
 // Desafio 10 - Crie a função techList
-
+const techList = (array, nome) => {
+  let arrayOrdenado = array.sort();
+  let retorno = [];
+  for (let index = 0; index < arrayOrdenado.length; index += 1) {
+    retorno.push({
+      tech: arrayOrdenado[index],
+      name: nome
+    })
+  } return retorno;
+}
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
