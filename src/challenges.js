@@ -72,7 +72,71 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return shorterDistance;
 };
 // Desafio 8 - Crie a função fizzBuzz
-
+const divisor3 = (array) => {
+  let numerosDiv3 = [];
+  for (let number of array) {
+    if (number % 3 === 0) {
+      numerosDiv3.push(number);
+    }
+  } return numerosDiv3;
+};
+const divisor5 = (array) => {
+  let numerosDiv5 = [];
+  for (let number of array) {
+    if (number % 5 === 0) {
+      numerosDiv5.push(number);
+    }
+  } return numerosDiv5;
+};
+const divisor3e5 = (array) => {
+  let array3 = divisor3(array);
+  let array5 = divisor5(array);
+  let array3e5 = [];
+  for (let number of array3) {
+    for (let number2 of array5) {
+      if (number === number2) {
+        array3e5.push(number);
+      }
+    }
+  } return array3e5;
+};
+const separa3 = (array) => {
+  let array3 = divisor3(array);
+  let array3e5 = divisor3e5(array);
+  let apenas3 = [];
+  for (let index = 0; index < array3.length; index += 1) {
+    if (!array3e5.includes(array3[index])) {
+      apenas3.push(array3[index]);
+    }
+  } return apenas3;
+};
+const separa5 = (array) => {
+  let array5 = divisor5(array);
+  let array3e5 = divisor3e5(array);
+  let apenas5 = [];
+  for (let index = 0; index < array5.length; index += 1) {
+    if (!array3e5.includes(array5[index])) {
+      apenas5.push(array5[index]);
+    }
+  } return apenas5;
+};
+const fizzBuzz = (array) => {
+  let mensagem = [];
+  let divisores3e5 = divisor3e5(array);
+  let apenas3 = separa3(array);
+  let apenas5 = separa5(array);
+  for (let numero of array) {
+    if (divisores3e5.includes(numero)) {
+      mensagem.push('fizzBuzz');
+    } else if (apenas3.includes(numero)) {
+      mensagem.push('fizz');
+    } else if (apenas5.includes(numero)) {
+      mensagem.push('buzz');
+    } else {
+      mensagem.push('bug!');
+    }
+  } return mensagem;
+};
 // Desafio 9 - Crie a função encode e a função decode
 
 // Desafio 10 - Crie a função techList
