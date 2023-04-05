@@ -20,20 +20,20 @@ const footballPoints = (wins, ties) => wins * 3 + ties;
 const highestNumber = (array) => {
   let number = array[0];
   for (let index = 1; index < array.length; index += 1) {
-      if (array[index] > number) {
-          number = array[index];
-      };
-  }; return number;
+    if (array[index] > number) {
+      number = array[index];
+    }
+  } return number;
 };
 const highestCount = (array) => {
   let highest = highestNumber(array);
   let quantity = 0;
   for (let numeroRepetido of array) {
-      if ((highest) === (numeroRepetido)) {
-          quantity += 1;
-      }
+    if ((highest) === (numeroRepetido)) {
+      quantity += 1;
+    }
   } return quantity;
-}
+};
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 const calcTriangleArea = (base, height) => (base * height) / 2;
 const calcRectangleArea = (base, height) => base * height;
@@ -137,7 +137,44 @@ const fizzBuzz = (array) => {
   } return mensagem;
 };
 // Desafio 9 - Crie a função encode e a função decode
-
+const encode = (frase) => {
+  const codigo = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let arrayObject = Object.keys(codigo);
+  let retorno = '';
+  let caracteres = frase.split('');
+  for (let index = 0; index < caracteres.length; index += 1) {
+    if (arrayObject.includes(caracteres[index])) {
+      retorno += codigo[caracteres[index]];
+    } else {
+      retorno += caracteres[index];
+    }
+  } return retorno;
+};
+const decode = (frase) => {
+  const codigo = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let arrayObject = Object.keys(codigo);
+  let retorno = '';
+  let caracteres = frase.split('');
+  for (let index = 0; index < caracteres.length; index += 1) {
+    if (arrayObject.includes(caracteres[index])) {
+      retorno += codigo[caracteres[index]];
+    } else {
+      retorno += caracteres[index];
+    }
+  } return retorno;
+};
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
