@@ -36,23 +36,41 @@ const footballPoints = (wins, ties) => wins * 3 + ties;
 //   } return quantity;
 // }
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-const calcTriangleArea = (base, height) => base * height / 2;
+const calcTriangleArea = (base, height) => (base * height) / 2;
 const calcRectangleArea = (base, height) => base * height;
 const calcAllAreas = (base, height, form) => {
-    let calcTriangle = calcTriangleArea(base, height);
-    let calcRectangle = calcRectangleArea(base, height);
-    let message = '';
-    if (form === 'triângulo') {
-        message = `O valor da área do ${form} é de: ${calcTriangle}`;
-    } else if (form === 'retângulo') {
-        message = `O valor da área do ${form} é de: ${calcRectangle}`;
-    } else {
-        message = `Não foi possível fazer o cálculo, insira uma forma geométrica válida`;
-    }
-    return message;
-}
+  let calcTriangle = calcTriangleArea(base, height);
+  let calcRectangle = calcRectangleArea(base, height);
+  let message = '';
+  if (form === 'triângulo') {
+    message = `O valor da área do ${form} é de: ${calcTriangle}`;
+  } else if (form === 'retângulo') {
+    message = `O valor da área do ${form} é de: ${calcRectangle}`;
+  } else {
+    message = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+  }
+  return message;
+};
 // Desafio 7 - Crie a função catAndMouse
-
+const catAndMouse = (mouse, cat1, cat2) => {
+  let firstCat = cat1 - mouse;
+  let secondCat = cat2 - mouse;
+  if (firstCat === -1) {
+    firstCat *= (-1);
+  }
+  if (secondCat === -1) {
+    secondCat *= (-1);
+  }
+  let shorterDistance = '';
+  if (firstCat < secondCat) {
+    shorterDistance = 'cat1';
+  } else if (secondCat < firstCat) {
+    shorterDistance = 'cat2';
+  } else if (firstCat === secondCat) {
+    shorterDistance = 'os gatos trombam e o rato foge';
+  }
+  return shorterDistance;
+};
 // Desafio 8 - Crie a função fizzBuzz
 
 // Desafio 9 - Crie a função encode e a função decode
