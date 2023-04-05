@@ -8,7 +8,10 @@ const compareTrue = (bool1, bool2) => {
   } return retorno;
 };
 // Desafio 2 - Crie a função splitSentence
-
+const splitSentence = (frase) => {
+  let palavras = frase.split(' ');
+  return palavras;
+};
 // Desafio 3 - Crie a função concatName
 
 // Desafio 4 - Crie a função footballPoints
