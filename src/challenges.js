@@ -1,5 +1,12 @@
 // Desafio 1 - Crie a função compareTrue
-
+const compareTrue = (bool1, bool2) => {
+  let retorno = false;
+  if (bool1 === true && bool2 === true) {
+    retorno = true;
+  } else {
+    retorno = false;
+  } return retorno;
+};
 // Desafio 2 - Crie a função splitSentence
 
 // Desafio 3 - Crie a função concatName
