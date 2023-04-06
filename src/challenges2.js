@@ -70,6 +70,20 @@ const triangleCheck = (lineA, lineB, lineC) => {
   } return retorno;
 };
 // Desafio 13 - Crie a função hydrate
+const hydrate = (frase) => {
+  let regex = /\d+/g;
+  let numeros = frase.match(regex);
+  let sum = 0;
+  let retorno = '';
+  for (let index = 0; index < numeros.length; index += 1) {
+    sum += parseInt(numeros[index]);
+  } if (sum > 1) {
+    retorno = `${sum} copos de água`;
+  } else if (sum === 1) {
+    retorno = `${sum} copo de água`;
+  }
+  return retorno;
+};
 
 /* eslint no-undef: 0 */
 
