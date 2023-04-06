@@ -52,20 +52,14 @@ const calcAllAreas = (base, height, form) => {
 };
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
-  let firstCat = cat1 - mouse;
-  let secondCat = cat2 - mouse;
-  if (firstCat === -1) {
-    firstCat *= (-1);
-  }
-  if (secondCat === -1) {
-    secondCat *= (-1);
-  }
+  let firstCat = cat1 - mouse < 0 ? (cat1 - mouse) * -1 : cat1 - mouse;
+  let secondCat = cat2 - mouse < 0 ? (cat2 - mouse) * -1 : cat2 - mouse;
   let shorterDistance = '';
   if (firstCat < secondCat) {
     shorterDistance = 'cat1';
   } else if (secondCat < firstCat) {
     shorterDistance = 'cat2';
-  } else if (firstCat === secondCat) {
+  } else {
     shorterDistance = 'os gatos trombam e o rato foge';
   }
   return shorterDistance;
