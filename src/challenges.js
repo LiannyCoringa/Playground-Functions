@@ -86,10 +86,8 @@ const divisor3e5 = (array) => {
   let array5 = divisor5(array);
   let array3e5 = [];
   for (let number of array3) {
-    for (let number2 of array5) {
-      if (number === number2) {
-        array3e5.push(number);
-      }
+    if (array5.includes(number)) {
+      array3e5.push(number);
     }
   } return array3e5;
 };
