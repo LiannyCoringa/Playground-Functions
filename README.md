@@ -1,10 +1,6 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Project Playground Functions
+
+Nesse maravilhoso projeto, tive a oportunidade de criar muitas funções diferentes envolvendo **loops**, **if/else**, **ternary operator**, **templates literals**, **arrays** e **objetos**!
+
+Obs.: Os arquivos /src/challenges.js e /src/challenges2.js foram modificados por mim e consta todos os código desenvolvidos por mim. 
+O diretório 'tests' e os arquivos '.editorconfig', '.eslintignore', '.eslintrc.json', '.gitignore', 'package-lock.json' e 'package.json' foram adicionados exclusivamente pela Trybe. 
