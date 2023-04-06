@@ -40,7 +40,35 @@ const generatePhoneNumber = (array) => {
   } return message;
 };
 // Desafio 12 -  Crie a função triangleCheck
-
+const checkOne = (lineA, lineB, lineC) => {
+  let sumAB = lineA + lineB;
+  let subAB = lineA - lineB;
+  let sumBC = lineB + lineC;
+  let subBC = lineB - lineC;
+  let sumAC = lineA + lineC;
+  let subAC = lineA - lineC;
+  let retorno = false;
+  if ((lineC < sumAB && lineC > Math.abs(subAB)) || (lineA < sumBC && lineA > Math.abs(subBC)) || (lineB < sumAC && lineB > Math.abs(subAC))) {
+    retorno = true;
+  } return retorno;
+};
+const checkTwo = (lineA, lineB, lineC) => {
+  let sumAB = lineA + lineB;
+  let sumBC = lineB + lineC;
+  let sumAC = lineA + lineC;
+  let retorno = false;
+  if (lineC < sumAB && lineA < sumBC && lineB < sumAC) {
+    retorno = true;
+  } return retorno;
+};
+const triangleCheck = (lineA, lineB, lineC) => {
+  let theCheckOne = checkOne(lineA, lineB, lineC);
+  let theCheckTwo = checkTwo(lineA, lineB, lineC);
+  let retorno = false;
+  if (theCheckOne === true || theCheckTwo === true) {
+    retorno = true;
+  } return retorno;
+};
 // Desafio 13 - Crie a função hydrate
 
 /* eslint no-undef: 0 */
